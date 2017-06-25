@@ -1,6 +1,6 @@
 # nginx-letsencrypt-container
 
-Steps to build and run (on your VPS of wherever):
+Steps to build and run (on your VPS or wherever):
 1. `cd nginx-letsencrypt-container`
 2. `chmod +x run.sh`
 3. Edit `run.sh` variables DOMAIN and EMAIL to the ones you want.
