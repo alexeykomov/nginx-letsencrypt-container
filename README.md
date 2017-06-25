@@ -1,6 +1,8 @@
 # nginx-letsencrypt-container
 
-Steps to build and run:
+Steps to build and run (on your VPS of wherever):
 1. `cd nginx-letsencrypt-container`
-2. `sudo docker build .`
-3. `sudo docker run -it -p 80:80 -p 443:443 -p 3000:3000 -v /etc/ssl:/etc/nginx/ssl -v /var/www/html:/var/www/html 8b670539a53e`
+2. `chmod +x run.sh`
+3. Edit `run.sh` variables DOMAIN and EMAIL to the ones you want.
+4. `sudo docker build .` 
+5. `./run.sh 8b670539a53e` where the hash is the id of container you've build in step 4.
