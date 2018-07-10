@@ -36,6 +36,8 @@ RUN apt-get install -y certbot
 # Init
 RUN mkdir -p /etc/my_init.d
 COPY 01-install-letsencrypt.sh /etc/my_init.d/01-install-letsencrypt.sh
-COPY crontab-changed /etc/my_init.d/crontab-changed
+ADD crontab /etc/cron.d/crontab-changed
+# Give execution rights on the cron job
+RUN chmod 0644 /etc/cron.d/crontab-changed
 COPY nginx.ssl.conf /etc/nginx/nginx.ssl.conf
 RUN chmod +x /etc/my_init.d/01-install-letsencrypt.sh
