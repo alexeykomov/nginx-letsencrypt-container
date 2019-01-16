@@ -1,5 +1,9 @@
 # nginx-letsencrypt-container
 
+To use:
+
+1. `docker pull alexeykomov/nginx-letsencrypt-container`
+
 Steps to build and run (on your VPS or wherever):
 1. `cd nginx-letsencrypt-container`
 2. `chmod +x run.sh`
